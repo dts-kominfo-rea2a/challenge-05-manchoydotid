@@ -7,12 +7,12 @@ const names = ["Halo", "Angel", "Nyoman", "Ketut", "Aisyah"];
 // "2. Nama"
 // ...
 const sorter = function (arrayNama, fnCallback) {
+  let hasilCallback = fnCallback(arrayNama);
   let hasil = [];
 
-  for (let counter = 0; counter < fnCallback(arrayNama).length; counter++) {
-    hasil.push(counter + 1 + ". " + fnCallback(arrayNama)[counter]);
+  for (let counter = 0; counter < hasilCallback.length; counter++) {
+    hasil.push(counter + 1 + ". " + hasilCallback[counter]);
   }
-  console.log(hasil);
   return hasil;
 };
 
